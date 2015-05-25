@@ -4,7 +4,12 @@ var Collective = require('collective');
  
 /* Config. Edit to suit your needs */
 var cpu_count = require('os').cpus().length; // A good practice to use all of availabe processors. 
-var hosts = ['127.0.0.1','192.168.1.150']; // Depends on how many servers you have. 
+var hosts = [
+'127.0.0.1', 
+'192.168.1.107', 
+'192.168.1.150'
+]; // Depends on how many servers you have. 
+
 var localhost = hosts[0]; // Select a proper host from hosts pool for the current server. 
 var port = 9000; // Starting port. Arbitrary, really. 
  
