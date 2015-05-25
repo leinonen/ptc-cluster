@@ -2,6 +2,7 @@
 var cluster = require('cluster');
 var Collective = require('collective');
 var express = require('express');
+var bodyParser = require('body-parser');
 
 /* Config. Edit to suit your needs */
 var cpu_count = require('os').cpus().length; // A good practice to use all of availabe processors. 
@@ -65,10 +66,17 @@ if (true === cluster.isMaster) {
 
 
     var app = express();
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
+
     var expressPort = collective.local.port - 1000;
 
     app.get('/waldo', function(req, res){
-      res.send('Waldo is ' + collective.get('waldo'));
+      res.json('Waldo is ' + collective.get('waldo'));
+    });
+
+    app.get('/hosts', function(req, res){
+      res.json(all_hosts);
     });
 
     app.get('/update', function(req, res){
