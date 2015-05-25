@@ -12,7 +12,7 @@ var hosts = [
 ]; // Depends on how many servers you have. 
 
 var localhost = hosts[0]; // Select a proper host from hosts pool for the current server. 
-var port = 9000; // Starting port. Arbitrary, really. 
+var port = 7000; // Starting port. Arbitrary, really.
 
 /**
  *  Populate with all possible hosts based on cpu count. WARNING: This will not work if your servers
