@@ -7,7 +7,7 @@ var cpu_count = require('os').cpus().length; // A good practice to use all of av
 var hosts = [
 '127.0.0.1', 
 '192.168.1.107', 
-'192.168.1.150'
+'192.168.1.50'
 ]; // Depends on how many servers you have. 
 
 var localhost = hosts[0]; // Select a proper host from hosts pool for the current server. 
