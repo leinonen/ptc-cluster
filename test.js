@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var cpu_count = require('os').cpus().length; // A good practice to use all of availabe processors. 
 var hosts = [
   '127.0.0.1',
-  '192.168.1.107',
   '192.168.1.50'
 ]; // Depends on how many servers you have. 
 
