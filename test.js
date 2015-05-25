@@ -81,7 +81,7 @@ if (true === cluster.isMaster) {
 
     app.get('/update', function(req, res){
       collective.set('waldo', 1, collective.OPERATIONS.INCREMENT);
-      res.send('Waldo is ' + collective.get('waldo'));
+      res.json('Waldo is ' + collective.get('waldo'));
     });
 
     app.listen(expressPort);
